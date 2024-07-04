@@ -274,3 +274,21 @@ const menu = () => {
 
 
 menu()
+// var tl6= gsap.timeline()
+
+// tl6.to(".part1 ",{
+//   x:"-100%",
+//   opacity:1,
+//  scrollTrigger:{
+//   scroller:"body",
+//   trigger:".page4",
+//   start:"top -1%",
+//   end:" -200% ",
+//   pin:true,
+
+//   scrub:1,
+ 
+
+
+// }
+// },"lol")
