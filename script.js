@@ -64,10 +64,10 @@ var tl = gsap.timeline({
   },
 });
 tl.to(".slide1", {
-  x: 350,
+  x: 384,
   duration: 1,
 
-  opacity: 0,
+  opacity: 1,
   scrollTrigger: {
     trigger: ".slide1",
     scroller: "body",
@@ -76,9 +76,9 @@ tl.to(".slide1", {
     end: "top 20%",
     scrub: "5",
   },
-});
+},"lol");
 tl.to(".slide2", {
-  x: 390,
+  x: 384,
   duration: 1,
   scrollTrigger: {
     trigger: ".slide1",
@@ -88,7 +88,19 @@ tl.to(".slide2", {
     end: "top 20%",
     scrub: "3",
   },
-});
+},"lol");
+tl.to(".page1 img", {
+  x: "-30vw",
+  
+  scrollTrigger: {
+    trigger: ".slide1",
+    scroller: "body",
+    // markers: true,
+    start: "top 44%",
+    end: "top 20%",
+    scrub: "3",
+  },
+},"lol");
 
 gsap.to(".box3", {
   y: 62,
@@ -330,3 +342,37 @@ const menuTextHover = () => {
 };
 
 menuTextHover();
+
+const page3Animation = () => {
+  gsap.to(".Page3Image img", {
+    y: "-130vh",
+    duration:5,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page3Image img",
+      start: "250% top",
+      end: "200% bottom",
+      pin: true,
+      scrub: 5,
+    }
+  })
+}
+
+page3Animation()
+
+const page4Animation =()=>{
+
+ 
+gsap.to(".part1",{
+  x:"-100%",
+ scrollTrigger:{
+  scroller:"body",
+  trigger:".page4",
+  start:"top 0%",
+  end:" -90% ",
+  scrub:1,
+  pin:true,
+}
+},"lol")
+}
+page4Animation()
