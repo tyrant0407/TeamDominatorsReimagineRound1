@@ -358,18 +358,19 @@ body {
 .page3 {
     height: 100vh;
     width: 100vw;
-    background-color: blue;
-    
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
     overflow: hidden;
-    overflow-x: hidden;
     position: absolute;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .text {
     height: 50%;
     width: 100%;
+    margin-top: -10vh;
 }
 
 .text h1 {
@@ -386,30 +387,17 @@ body {
     opacity: 0;
 }
 
-.imgdiv {
-    height: 50%;
+.Page3Image{
+    height: 65vh;
+    width: 52vh;
+    overflow: hidden;
+   margin-top: -10vh;
+    border-radius: 30px;
+}
+
+.Page3Image img{
+    height: 100%;
     width: 100%;
-}
-
-.imgdiv2 {
-    height: 40%;
-    width: 40%;
-    margin-left: 37vw;
-    margin-top: -5vh;
-
-}
-
-.img1 img {
-    height: 60%;
-    width: 60%;
-
-}
-
-.img2 {
-    height: 60%;
-    width: 60%;
-    opacity: 0;
-
 }
 
 .pageVideo {

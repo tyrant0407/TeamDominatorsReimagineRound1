@@ -343,7 +343,22 @@ const menuTextHover = () => {
 
 menuTextHover();
 
+const page3Animation = () => {
+  gsap.to(".Page3Image img", {
+    y: "-130vh",
+    duration:5,
+    scrollTrigger: {
+      scroller: "body",
+      trigger: ".page3Image img",
+      start: "250% top",
+      end: "200% bottom",
+      pin: true,
+      scrub: 5,
+    }
+  })
+}
 
+page3Animation()
 const page4Animation =()=>{
 
  
