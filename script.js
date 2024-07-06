@@ -271,24 +271,62 @@ const menu = () => {
    
   });
 };
-
-
 menu()
-// var tl6= gsap.timeline()
 
-// tl6.to(".part1 ",{
-//   x:"-100%",
-//   opacity:1,
-//  scrollTrigger:{
-//   scroller:"body",
-//   trigger:".page4",
-//   start:"top -1%",
-//   end:" -200% ",
-//   pin:true,
+const menuTextHover = () => {
+  var hoverTimeline = gsap.timeline({ paused: true });
+  const images = document.querySelectorAll(".menuImg img");
+  
 
-//   scrub:1,
- 
+  document.querySelector(".menuText").addEventListener("mouseenter", function(event) {
+      if (event.target.classList.contains("gogo")) {
+          var span = event.target.querySelector("span");
+          var index = event.target.getAttribute("data-index");
 
+          // Animate the span
+          hoverTimeline.clear(); // Clear the timeline for each new hover event
+          hoverTimeline.to(span, {
+              left: "100%",
+              color: "#f036e0"
+          }).to(span, {
+              left: "-100%",
+              duration: 0.0001,
+          });
+          hoverTimeline.play();
 
-// }
-// },"lol")
+          // Show the corresponding image
+          gsap.to(images, {
+              y: "56vh",
+         
+              onComplete: function() {
+                  images.forEach((img, i) => {
+                      if (i == index) {
+                          gsap.to(img, { y:"-56vh"});
+                      }
+                  });
+              }
+          });
+              // Change the color of the h1 element
+              gsap.to(event.target, {
+                color: colors[index],
+                duration: 0.5
+            });
+      }
+  }, true);
+
+  document.querySelector(".menuText").addEventListener("mouseleave", function(event) {
+      if (event.target.classList.contains("gogo")) {
+          var span = event.target.querySelector("span");
+
+          // Animate the span
+          hoverTimeline.clear(); // Clear the timeline for each new leave event
+          hoverTimeline.to(span, {
+              left: "0"
+          });
+          hoverTimeline.play();
+        
+      }
+  }, true);
+};
+
+menuTextHover();
