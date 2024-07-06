@@ -121,7 +121,7 @@ gsap.to(".page3", {
     start: "top -10%",
     end: " -100% ",
     pin: true,
-    scrub: 3,
+    scrub: 1,
 
 
 
@@ -241,11 +241,11 @@ const menu = () => {
       delay: 0.25,
       duration: 1,
     }, "saath");
-      menuTimeline.to(".menuImg", {
-        y:"-350vh",
-        delay: 0.25,
-        duration: 1,
-      }, "saath");
+    menuTimeline.to(".menuImg", {
+      y: "-350vh",
+      delay: 0.25,
+      duration: 1,
+    }, "saath");
 
     menuTimeline.to(".menudiv3", {
       y: "-300vh",
@@ -259,12 +259,12 @@ const menu = () => {
     }, "saath");
     menuTimeline.to(".menuText h1", {
       y: "-100vh",
-      stagger:0.1,
-    },"close");
+      stagger: 0.1,
+    }, "close");
     menuTimeline.to(".menuClose", {
       x: "-8vh",
-    },"close");
-    
+    }, "close");
+
 
   });
 
@@ -280,7 +280,7 @@ const menu = () => {
       scroller.classList.remove('hidden'); // Hide the menu after reverse animation completes
     });
 
-   
+
   });
 };
 menu()
@@ -288,56 +288,56 @@ menu()
 const menuTextHover = () => {
   var hoverTimeline = gsap.timeline({ paused: true });
   const images = document.querySelectorAll(".menuImg img");
-  
 
-  document.querySelector(".menuText").addEventListener("mouseenter", function(event) {
-      if (event.target.classList.contains("gogo")) {
-          var span = event.target.querySelector("span");
-          var index = event.target.getAttribute("data-index");
 
-          // Animate the span
-          hoverTimeline.clear(); // Clear the timeline for each new hover event
-          hoverTimeline.to(span, {
-              left: "100%",
-              color: "#f036e0"
-          }).to(span, {
-              left: "-100%",
-              duration: 0.0001,
+  document.querySelector(".menuText").addEventListener("mouseenter", function (event) {
+    if (event.target.classList.contains("gogo")) {
+      var span = event.target.querySelector("span");
+      var index = event.target.getAttribute("data-index");
+
+      // Animate the span
+      hoverTimeline.clear(); // Clear the timeline for each new hover event
+      hoverTimeline.to(span, {
+        left: "100%",
+        color: "#f036e0"
+      }).to(span, {
+        left: "-100%",
+        duration: 0.0001,
+      });
+      hoverTimeline.play();
+
+      // Show the corresponding image
+      gsap.to(images, {
+        y: "56vh",
+
+        onComplete: function () {
+          images.forEach((img, i) => {
+            if (i == index) {
+              gsap.to(img, { y: "-56vh" });
+            }
           });
-          hoverTimeline.play();
-
-          // Show the corresponding image
-          gsap.to(images, {
-              y: "56vh",
-         
-              onComplete: function() {
-                  images.forEach((img, i) => {
-                      if (i == index) {
-                          gsap.to(img, { y:"-56vh"});
-                      }
-                  });
-              }
-          });
-              // Change the color of the h1 element
-              gsap.to(event.target, {
-                color: colors[index],
-                duration: 0.5
-            });
-      }
+        }
+      });
+      // Change the color of the h1 element
+      gsap.to(event.target, {
+        color: colors[index],
+        duration: 0.5
+      });
+    }
   }, true);
 
-  document.querySelector(".menuText").addEventListener("mouseleave", function(event) {
-      if (event.target.classList.contains("gogo")) {
-          var span = event.target.querySelector("span");
+  document.querySelector(".menuText").addEventListener("mouseleave", function (event) {
+    if (event.target.classList.contains("gogo")) {
+      var span = event.target.querySelector("span");
 
-          // Animate the span
-          hoverTimeline.clear(); // Clear the timeline for each new leave event
-          hoverTimeline.to(span, {
-              left: "0"
-          });
-          hoverTimeline.play();
-        
-      }
+      // Animate the span
+      hoverTimeline.clear(); // Clear the timeline for each new leave event
+      hoverTimeline.to(span, {
+        left: "0"
+      });
+      hoverTimeline.play();
+
+    }
   }, true);
 };
 

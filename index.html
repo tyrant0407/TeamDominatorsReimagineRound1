@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -53,9 +51,9 @@
       <div class="menuClose">
         <button>
           <i class="ri-close-large-line"></i>
-         </button>
+        </button>
       </div>
- 
+
       <div class="menuText">
         <h1 class="gogo" data-index="0">Athlete <span></span></h1>
         <h1 class="gogo" data-index="1">Sports <span></span></h1>
@@ -98,21 +96,33 @@
       </div>
       
     </div>
+
     <div id="page2" class="page2">
       <h1>red-bull-gives-you-wings-world-of-red-bull-commercial</h1>
       <div class="imghover1">
-        <img class="hoverimg1"  src="https://i.pinimg.com/564x/e7/b6/ab/e7b6ab528a44270c773cc53e18e4d9f6.jpg" alt="">
+        <img class="hoverimg1" src="https://i.pinimg.com/564x/e7/b6/ab/e7b6ab528a44270c773cc53e18e4d9f6.jpg" alt="">
         <img class="hoverimg2" src="https://i.pinimg.com/736x/95/5a/3e/955a3ef5c3f18025fae21f978448068f.jpg" alt="">
 
       </div>
       <div class="imghover2">
- <img class="hoverimg3" src="https://i.pinimg.com/736x/23/a9/5f/23a95f6209802c8f340c7144cb4428f5.jpg" alt="">
- <img class="hoverimg4" src="https://i.pinimg.com/736x/47/7d/34/477d34da000a0dd784783f564b0b516b.jpg" alt="">
+        <img class="hoverimg3" src="https://i.pinimg.com/736x/23/a9/5f/23a95f6209802c8f340c7144cb4428f5.jpg" alt="">
+        <img class="hoverimg4" src="https://i.pinimg.com/736x/47/7d/34/477d34da000a0dd784783f564b0b516b.jpg" alt="">
 
       </div>
-    
+
     </div>
     <div class="page3">
+      <div class="text">
+        <h1>
+          "No Red Bull,<br> no wings."
+        </h1>
+        <h2>"Red Bull: The <br>drink for high flyers."</h2>
+      </div>
+      <div class="Page3Image">
+        <img src="./Images/page3 img1.webp" alt="">
+        <img src="./Images/page3 img2.jpg" alt="">
+        <img src="./Images/PAGE3 IMG3.jpg" alt="">
+      </div>
       <div class="text">
         <h1>
           "No Red Bull,<br> no wings."
@@ -223,12 +233,19 @@ The best advice for street style dance that you will ever receive</h1>
 
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--  Gsap is needed for Basic Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Scroll Trigger is needed for Scroll Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js is needed for 3d Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+  <!-- ControlKit is needed for Debug Panel -->
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
   <script src="script.js"></script>
 </body>
 
