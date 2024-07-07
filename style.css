@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
     position: fixed;
     z-index: 200;
     border-radius: 50%;
+    opacity: 0;
 }
 .main {
     overflow: hidden;

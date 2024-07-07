@@ -7,6 +7,7 @@ const cursorAnime =()=>{
       x:dets.x,
       y:dets.y,
       duration:0.5,
+      opacity:1,
     })
   })
   menu.addEventListener("mouseenter",(dets)=>{
