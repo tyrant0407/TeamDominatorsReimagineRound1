@@ -1,5 +1,28 @@
-
-
+const cursorAnime =()=>{
+  var cursor = document.querySelector(".cursor")
+  var main = document.querySelector(".main")
+  var menu = document.querySelector(".menu")
+  main.addEventListener("mousemove",(dets)=>{
+    gsap.to(cursor,{
+      x:dets.x,
+      y:dets.y,
+      duration:0.5,
+    })
+  })
+  menu.addEventListener("mouseenter",(dets)=>{
+    gsap.to(cursor,{
+    backgroundColor:"rgba(255, 255, 255, 0.677)",
+    scale:1.1,
+    })
+  })
+  menu.addEventListener("mouseleave",(dets)=>{
+    gsap.to(cursor,{
+    backgroundColor:"black",
+    scale:1,
+    })
+  })
+}
+cursorAnime()
 function loadingTimer() {
   var timer = document.querySelector("#timer h1");
   var timerButton = document.querySelector("#timer button");
