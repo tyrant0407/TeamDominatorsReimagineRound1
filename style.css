@@ -25,8 +25,7 @@ body {
 .loader {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, #000000 30%, #232d8a 100%);
-
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +48,7 @@ body {
 .line2 h1,
 .line3 h1 {
     font-size: 8vh;
-    /* font-weight: 700; */
+    color: #000;
 }
 
 .line2 {
@@ -107,7 +106,7 @@ body {
     position: absolute;
     bottom: 4%;
     right: 2%;
-    color: #fff;
+    color: #000000;
     text-align: right;
     z-index: 99;
 
@@ -125,9 +124,9 @@ body {
     font-size: 1.6vw;
     text-transform: uppercase;
     border-radius: 5px;
+    color: black;
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #000000;
     transition-delay: 1s;
     transition: all ease 0.8s;
     font-weight: 900;
@@ -150,18 +149,17 @@ body {
 
 #timer button:hover::after {
     bottom: 0;
-
 }
 
 #timer button span {
     position: relative;
     transition: all ease 0.4s;
     z-index: 9;
+    color: #000;
 }
 
-
-#timer button:hover {
-    border: 2px solid #060606;
+#timer button:hover span { 
+    color: #ffffff;
 }
 
 .menu {
@@ -291,7 +289,6 @@ body {
     color: #000;
 }
 .page1 {
-
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -301,13 +298,12 @@ body {
 #page2 {
     height: 110vh;
     width: 100vw;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-
+    background-color:#ffffff;
     position: relative;
     z-index: 0;
     overflow-x: none;
-
 }
+
 
 .imghover1 {
     height: 50vh;
@@ -317,6 +313,7 @@ body {
     gap: 2vw;
     padding-top: 6vw;
     padding-left: 2vw;
+  
 }
 
 .imghover2 {
@@ -329,37 +326,47 @@ body {
     padding-right: 2vw;
 }
 
-.imghover1 img {
-    height: 90%;
-    width: 30%;
 
+.hoverimg1,.hoverimg2,.hoverimg3,.hoverimg4{
+    height: 45vh;
+    width: 30vw;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
 }
-
-.imghover2 img {
-    height: 90%;
-    width: 30%;
-
+.hoverimg1 img,.hoverimg2 img,.hoverimg3 img,.hoverimg4 img{
+    height: 75%;
+    width: 85%;
+    border-radius: 50px;
 }
-
+.hoverimg1 h1,.hoverimg2 h1,.hoverimg3 h1,.hoverimg4 h1{
+ font-size: 2vh;
+ color: white;
+}
 .page2 h1 {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    font-size: 4vw;
+    top: 81vh;
+    left: 70vw;
+    font-size: 8vw;
+    width: 50vw;
     transform: translate(-50%, -50%);
     z-index: 2;
     opacity: 0;
     color: #000000;
-    
-
+}
+.page2 h2{
+    font-size: 6vh;
 }
 
 
-
 .page3 {
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
-    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+   background-color: white;
     overflow: hidden;
     position: absolute;
     display: flex;
@@ -379,6 +386,7 @@ body {
     font-size: 9vw;
     line-height: 0.9;
     padding-top: 7.5vw;
+    color: #000;
 }
 
 .text h2 {
@@ -411,15 +419,16 @@ body {
 .pageVideo video {
     height: 100vh;
     width: 100vw;
-    scale: 1.78;
+    scale: 1.80;
 
 }
 
 .pagetext {
     height: 100vh;
     width: 50vw;
-    background-color:#FFCD00;
+    background-color:#ffffff;
     display: flex;
+   
     
 }
 .page1 img{
@@ -434,14 +443,15 @@ body {
 .pagetext h1{
  font-size: 4vw;
  padding-left: 2vw;
- color: #000;
  line-height: 1.3;
 }
-
+.pagetext h1 span{
+    color: #686868;
+}
 .slide1 {
     height: 25vh;
     width: 21vw;
-    background-color:#FFCD00;
+    background-color:#ffffff;
     border-radius: 25px;
     position: absolute;
     top: 52vh;
@@ -451,7 +461,7 @@ body {
 .slide2 {
     height: 24vh;
     width: 70vw;
-    background-color:#FFCD00;
+    background-color:#ffffff;
     position: absolute;
     border-radius: 25px;
     bottom: 0vh;
@@ -477,7 +487,6 @@ body {
     top: 30%;
     right: 0%;
 }
-
 .box1 {
     height: 2vh;
     width: 2vw;
@@ -489,28 +498,32 @@ body {
     height: 2vh;
     width: 2vw;
     border: 2px solid black;
-    margin-top: 8px;
+    margin-top: 1vw;
+}
+.box5 {
+    height: 2vh;
+    width: 2vw;
+    border: 2px solid black;
+    margin-top: 0.5vw;
 }
 
 .box2 {
     height: 2vh;
     width: 2vw;
     border: 2px solid black;
-    margin-top: 14px;
+    margin-top: 1vw;
 }
 
 .box3 {
     position: absolute;
-    top: -7.5px;
-    right: 34px;
+    top: -1vh;
+    right: 1.8vw;
     height: 3.5vh;
     width: 3.5vw;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 0.6vw;
 
 }
-
-
 
 .no-scroll {
     overflow: hidden;
@@ -529,8 +542,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1vw;
-background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
-/* background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%); */
+background-color: white;
 
     position: absolute;
     z-index: 3;
@@ -539,14 +551,14 @@ background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%
  .p1{
     height: 80vh;
     width: 20vw;
-    background-color: #FDFDFD;
+    background-color: #000000;
     margin-left: 3vw;
     text-align: center;
     border-radius: 3vh;
  }
  .p1 h1{
     font-size: 2.5vw;
-    color: #000;
+    color: #ffffff;
     line-height: 1;
     margin-top: 6vh;
     
@@ -559,13 +571,13 @@ background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%
  .p2{
     height: 80vh;
     width: 20vw;
-    background-color: #FFFFFF;
+    background-color: #000000;
     text-align: center;
     border-radius: 3vh;
  }
  .p2 h1{
     font-size: 2.5vw;
-    color: #000;
+    color: #ffffff;
     line-height: 1;
     margin-top: 6vh;
     
@@ -637,8 +649,7 @@ background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%
  .part2{
     height: 100vh;
     width: 100vw;
-background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
-/* background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%); */
+background-color: white;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -650,7 +661,7 @@ gap: 1vw;
  .about1{
     height: 80vh;
     width: 24vw;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 3vh;
     margin-left: 3vw;
@@ -664,29 +675,17 @@ gap: 1vw;
  .about1 h1{
     font-size: 1.6vw;
     font-weight: 500;
-    color: #000;
+    color: #f1f1f1;
  }
  .about1 p{
    
-    color: #000;
+    color: #ffffff;
  }
- .last1{
-    display: flex;
-  justify-content: space-between;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 2vh;
- }
- .last1 h3{
-    color: #000;
- }
- .last1 h4{
-    color: #000;
- }
+
  .about2{
     height: 80vh;
     width: 24vw;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 3vh;
  
@@ -699,29 +698,18 @@ gap: 1vw;
  .about2 h1{
     font-size: 1.7vw;
     font-weight: 500;
-    color: #000;
+    color: #ffffff;
  }
  .about2 p{
    
-    color: #000;
+    color: #ffffff;
  }
- .last1{
-    display: flex;
-  justify-content: space-between;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 2vh;
- }
- .last1 h3{
-    color: #000;
- }
- .last1 h4{
-    color: #000;
- }
+ 
+
  .about3{
     height: 80vh;
     width: 24vw;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 3vh;
  }
@@ -733,29 +721,17 @@ gap: 1vw;
  .about3 h1{
     font-size: 1.6vw;
     font-weight: 500;
-    color: #000;
+    color: #ffffff;
  }
  .about3 p{
    
-    color: #000;
+    color: #ffffff;
  }
- .last1{
-    display: flex;
-  justify-content: space-between;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  margin-top: 2vh;
- }
- .last1 h3{
-    color: #000;
- }
- .last1 h4{
-    color: #000;
- }
+ 
  .about4{
     height: 80vh;
     width: 24vw;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 3vh;
     margin-right: 3vw;
@@ -768,11 +744,11 @@ gap: 1vw;
  .about4 h1{
     font-size: 1.6vw;
     font-weight: 500;
-    color: #000;
+    color: #ffffff;
  }
  .about4 p{
    
-    color: #000;
+    color: #ffffff;
  }
  .last1{
     display: flex;
@@ -782,8 +758,8 @@ gap: 1vw;
   margin-top: 2vh;
  }
  .last1 h3{
-    color: #000;
+    color: #ffffff;
  }
  .last1 h4{
-    color: #000;
+    color: #ffffff;
  }

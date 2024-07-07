@@ -53,6 +53,25 @@ function loadingTimer() {
 loadingTimer();
 
 
+
+const page1Animation = ()=>{
+  var page1Text = document.querySelector(".pagetext h1").textContent
+var hanime = "";
+page1Text.split("").forEach(function (elem) {
+  hanime  += `<span>${elem}</span>`
+})
+
+document.querySelector(".pagetext h1").innerHTML = hanime ;
+
+Shery.imageEffect(".hero", {
+  style: 2, //Select Style
+  // debug: true, // Debug Panel
+  config: {
+    /* Config made from debug panel */
+  },
+  preset: "./presets/wigglewobble.json",
+});
+
 var tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".page1",
@@ -63,6 +82,11 @@ var tl = gsap.timeline({
     scrub: 1,
   },
 });
+tl.to(".pagetext h1 span", {
+  color: "#000",
+  stagger: 0.5,
+  
+})
 tl.to(".slide1", {
   x: 384,
   duration: 1,
@@ -103,12 +127,12 @@ tl.to(".page1 img", {
 },"lol");
 
 gsap.to(".box3", {
-  y: 62,
+  y: 110,
   scrollTrigger: {
     trigger: ".page1",
     scroller: "body",
     start: "top -150",
-    end: "top -240%",
+    end: "top -400%",
     scrub: 5,
   },
 });
@@ -129,10 +153,8 @@ gsap.to(".page3", {
 })
 var tl3 = gsap.timeline()
 tl3.to(".hoverimg1", {
-  y: 240,
-  x: 600,
-
-  scale: 1.2,
+  y: "28vh",
+ x:"0vw",  
   scrollTrigger: {
     scroller: "body",
     trigger: ".slide1",
@@ -146,9 +168,9 @@ tl3.to(".hoverimg1", {
   }
 }, "lol")
 tl3.to(".hoverimg2", {
-  y: 240,
+  y: "28vh",
+ x:"-31vw",  
 
-  scale: 1.2,
   scrollTrigger: {
     scroller: "body",
     trigger: ".slide1",
@@ -162,10 +184,8 @@ tl3.to(".hoverimg2", {
   }
 }, "lol")
 tl3.to(".hoverimg3", {
-  y: -240,
-  x: -70,
-
-  scale: 1.2,
+  y: "-21.5vh",
+  x: "-34vw",
   scrollTrigger: {
     scroller: "body",
     trigger: ".slide1",
@@ -179,10 +199,8 @@ tl3.to(".hoverimg3", {
   }
 }, "lol")
 tl3.to(".hoverimg4", {
-  y: -240,
-  x: -670,
-
-  scale: 1.2,
+  y: "-21.5vh",
+  x: "-65.5vw",
   scrollTrigger: {
     scroller: "body",
     trigger: ".slide1",
@@ -210,6 +228,11 @@ tl3.to(".page2 h1", {
 
   }
 }, "lol")
+
+
+}
+page1Animation()
+
 
 const menu = () => {
   const menuButton = document.querySelector(".menuButton");
@@ -351,7 +374,7 @@ const page3Animation = () => {
       scroller: "body",
       trigger: ".page3Image img",
       start: "250% top",
-      end: "200% bottom",
+      end: "200% -100%",
       pin: true,
       scrub: 5,
     }
@@ -376,3 +399,5 @@ gsap.to(".part1",{
 },"lol")
 }
 page4Animation()
+
+
