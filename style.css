@@ -1351,7 +1351,9 @@ gap: 1vw;
  height: 35vh;
  }
 
- 
+ .p5{
+    display: none;
+ }
  .part2{
     width: 48vh;
     height: 800px;
