@@ -25,7 +25,7 @@ function loadingTimer() {
     duration: 1,
   }, "logo")
   gsap.to(".YELLOW", {
-    x: 30,
+    x: 55,
     duration: 1,
   }, "logo")
 
