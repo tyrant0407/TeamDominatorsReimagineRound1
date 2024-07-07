@@ -6,7 +6,7 @@ function loadingTimer() {
   var grow = 0;
   var int = setInterval(function () {
     if (grow < 90) {
-      grow += Math.floor(Math.random() * 20);
+      grow += Math.floor(Math.random() * 10);
       timer.innerHTML = grow + "%";
     } else {
       grow = 100;

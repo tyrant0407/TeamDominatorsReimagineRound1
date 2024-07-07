@@ -918,7 +918,7 @@ gap: 1vw;
     width: 85vw;
     overflow: hidden;
     top: 395vh;
-    left: 17%;
+    left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 50px;
 }
@@ -928,7 +928,7 @@ gap: 1vw;
     position: absolute;
     z-index: 0;
     top: 56vh;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 .menuButton {
     height: 4vh;
@@ -1110,7 +1110,7 @@ gap: 1vw;
 
 
 #page2 {
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
     background-color:#ffffff;
     position: relative;
@@ -1129,6 +1129,7 @@ gap: 1vw;
     gap: 2vw;
     padding-top: 6vw;
     padding-left: 2vw;
+    margin-top: 20vh;
   
 }
 
@@ -1172,7 +1173,9 @@ gap: 1vw;
     transform: translate(-50%, -50%);
     z-index: 2;
     opacity: 1;
+    margin-top: 25vh;
     color: #000000;
+    
 }
 
 
