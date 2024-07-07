@@ -16,7 +16,9 @@ body {
     height: 100%;
     width: 100%;
 }
-
+title{
+    color: red;
+}
 .main {
     overflow: hidden;
     position: relative;
