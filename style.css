@@ -15,10 +15,12 @@ html,
 body {
     height: 100%;
     width: 100%;
+
 }
-title{
-    color: red;
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
 }
+
 .main {
     overflow: hidden;
     position: relative;

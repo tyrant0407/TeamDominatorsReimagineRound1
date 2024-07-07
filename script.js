@@ -63,14 +63,7 @@ page1Text.split("").forEach(function (elem) {
 
 document.querySelector(".pagetext h1").innerHTML = hanime ;
 
-// Shery.imageEffect(".hero", {
-//   style: 2, //Select Style
-//   // debug: true, // Debug Panel
-//   config: {
-//     /* Config made from debug panel */
-//   },
-//   preset: "./presets/wigglewobble.json",
-// });
+
 
 var tl = gsap.timeline({
   scrollTrigger: {
